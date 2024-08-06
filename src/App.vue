@@ -61,15 +61,7 @@ const restart = () => {
 <template>
     <div class="container">
         <div class="turnIndicator">
-            <template v-if="statusText.startsWith('Winner')">
-                {{ statusText }}
-            </template>
-            <template v-else-if="statusText === 'Draw'">
-                {{ statusText }}
-            </template>
-            <template v-else>
-                {{ statusText }}
-            </template>
+            {{ statusText }}
         </div>
         <div class="btn-display">
             <section class="btn-holder">
