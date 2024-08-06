@@ -140,7 +140,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    aspect-ratio: 1 / 1;
 }
 
 .btn {
@@ -158,19 +157,6 @@ body {
     align-items: center;
     min-height: 120px;
     position: relative;
-}
-
-.btn::before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-}
-
-.btn span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .btn:hover {
