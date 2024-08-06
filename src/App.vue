@@ -4,7 +4,8 @@ import { ref } from "vue";
 const board = ref(Array(9).fill(null));
 const currentPlayer = ref("X");
 const statusText = ref("Current Turn: X");
-const buttons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+// const buttons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+const buttons = board.value.map((_, index) => index);
 
 const winPatterns = [
     [0, 1, 2],
@@ -238,10 +239,10 @@ body {
         font-size: 36px;
         min-height: 60px;
     }
-    .btn-display{
+    .btn-display {
         padding: 15px;
     }
-    .btn-holder{
+    .btn-holder {
         gap: 10px;
     }
     .reset-btn {
